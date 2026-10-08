@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why You Can Trust Me</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+    }
+
+    body {
+      /* Dirty white / warm linen background */
+      background-color: #f4f1ea;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    /* Soft rose-pink card container with deep red accent shadows */
+    .card {
+      background: #fff1f2; /* Soft blushing pink */
+      border: 1px solid #fecdd3; /* Rose border */
+      border-radius: 20px;
+      padding: 24px;
+      color: #881337; /* Rich deep rose/burgundy text */
+      box-shadow: 0 14px 30px rgba(190, 18, 60, 0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    /* CARD 1: Initial State */
+    #card-front {
+      cursor: pointer;
+      padding: 65px 24px;
+    }
+
+    #card-front:hover {
+      transform: translateY(-4px);
+      border-color: #fda4af;
+      box-shadow: 0 18px 35px rgba(190, 18, 60, 0.15);
+    }
+
+    .sub-code {
+      font-family: monospace;
+      color: #e11d48; /* Vibrant crimson code */
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .main-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #9f1239;
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+
+    .click-hint {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 24px;
+      background: #ffe4e6;
+      border: 1px solid #f43f5e;
+      color: #be123c;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* CARD 2: Revealed State */
+    #card-back {
+      display: none;
+      text-align: left;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #ffe4e6;
+      border: 1px solid #fecdd3;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .badge {
+      font-family: monospace;
+      display: inline-block;
+      font-size: 0.75rem;
+      color: #e11d48;
+      background: #ffe4e6;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #fecdd3;
+    }
+
+    .personal-message {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4c0519; /* High-contrast readable deep wine */
+      margin-bottom: 18px;
+      white-space: pre-line;
+    }
+
+    .code-reasons {
+      background: #ffe4e6;
+      border-radius: 12px;
+      padding: 14px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: #9f1239;
+      line-height: 1.7;
+      border: 1px solid #fecdd3;
+    }
+
+    .highlight {
+      color: #e11d48;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-container">
+
+  <!-- First Card: Cover -->
+  <div class="card" id="card-front" onclick="revealCard()">
+    <div class="sub-code">&lt;execute verify_trust()&gt;</div>
+    <div class="main-title">Reasons Why You Can Trust Me</div>
+    <div class="click-hint">tap to open 💌</div>
+  </div>
+
+  <!-- Second Card: Image + Your Message + Reasons -->
+  <div class="card" id="card-back">
+    
+    <!-- 1. Put your image link or filename (e.g. photo.jpg) here -->
+    <div class="image-wrapper">
+      <img src="pic.jpg" alt="Us">
+    </div>
+
+
+    <!-- 2. Write your personal message here -->
+    <div class="personal-message">
+Hey love,
+
+You don't have to trust me now, but I promise my eyes and attention are only on you. I won’t keep secrets para di ka mag doubt. If you're ever worried or ga doubt ka nako, feel free to express your feelings. I will never make you overthink love love
+    </div>
+
+<script>
+  function revealCard() {
+    document.getElementById('card-front').style.display = 'none';
+    document.getElementById('card-back').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
